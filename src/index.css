@@ -1,0 +1,566 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins";
+    transition: .5s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: white;
+}
+
+header {
+    background-color: rgb(25, 28, 53);
+    color: white;
+}
+
+header nav h3 {
+    font-size: 25px;
+}
+
+header nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+header ul {
+    list-style-type: none;
+}
+
+header ul.lang {
+    background-color: rgb(50, 43, 124);
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+header .routes {
+    list-style-type: none;
+    display: flex;
+    column-gap: 20px;
+}
+
+header .routes li a {
+    text-decoration: none;
+    color: white;
+}
+
+header .routes li a:hover {
+    text-decoration: underline;
+}
+
+header .hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+header .hero h1 {
+    font-size: 50px;
+    margin: 1rem 0;
+}
+
+header .hero h3 {
+    font-size: 30px;
+    color: rgb(251, 175, 65);
+}
+
+header .hero .img-form {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 4rem;
+    column-gap: 20px;
+}
+
+header .hero .img-form .img img {
+    width: 100%;
+}
+
+header .hero .img-form .img {
+    width: 65%;
+}
+
+header .hero .img-form .form h3 {
+    color: rgb(25, 28, 53);
+}
+
+header .hero .img-form .form {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 35%;
+}
+
+header .hero .img-form .form input {
+    padding: 10px;
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    font-size: 15px;
+    border-radius: 8px;
+}
+
+header .hero .img-form .form button,
+.btn {
+    border-radius: 8px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    color: white;
+    background: rgb(251, 175, 65);
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px 0;
+    text-transform: uppercase;
+}
+
+.discover {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: black;
+    padding: 5rem 1rem;
+}
+
+.discover h1,
+.why h1 {
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+}
+
+.discover .txt-img,
+.why .txt-img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+
+.discover .txt-img p,
+.why .txt-img p {
+    width: 70%;
+}
+
+.discover .txt-img .img,
+.why .txt-img .img {
+    width: 30%;
+}
+
+.discover .txt-img .img img,
+.why .txt-img .img img {
+    width: 100%;
+}
+
+.discover .discover-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 40px;
+    padding: 25px 0;
+}
+
+.discover .discover-grid .gridItem {
+    border: 1px solid rgb(251, 175, 65);
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.discover .discover-grid .gridItem h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 0;
+}
+
+.discover .btn {
+    max-width: 500px;
+    padding: 20px;
+    text-transform: uppercase;
+    align-self: center;
+}
+
+.start {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgb(235, 236, 236);
+    text-align: center;
+    padding: 2rem;
+}
+
+.start h1 {
+    color: rgb(251, 175, 65);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.start h3 {
+    font-size: 15px;
+    color: rgb(25, 28, 53);
+}
+
+.start .startGrid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 3rem 0;
+    grid-gap: 20px;
+    position: relative;
+}
+
+.start .startGrid::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(25, 28, 53);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.start .startGrid .startItem {
+    padding: 2rem 20px;
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.start .startGrid .startItem h3 {
+    font-size: 20px;
+    padding: 10px 0;
+}
+
+.start .startGrid .startItem p {
+    font-size: 13px;
+    text-align: start;
+}
+
+.start .btn {
+    max-width: 500px;
+    padding: 20px;
+    text-transform: uppercase;
+    align-self: center;
+}
+
+.outer {
+    background-color: rgb(235, 236, 236);
+    padding: 3rem 0;
+}
+
+.why {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 10px;
+}
+
+.why .txt-img {
+    align-items: flex-start;
+}
+
+.offer {
+    display: flex;
+    padding: 3rem 10px;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.offer .img img {
+    width: 100%;
+}
+
+.offer .txt {
+    width: 60%;
+}
+
+.offer .txt p b {
+    font-size: 16px;
+}
+
+.offer .txt p {
+    font-size: 14px;
+}
+
+.offer .img {
+    width: 40%;
+}
+
+.why .opportunity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.why .opportunity h1 {
+    width: 70%;
+    font-size: 30px;
+}
+
+.why .opportunity .img img {
+    width: 100%;
+}
+
+.why .opportunity .img {
+    width: 30%;
+}
+
+.why .btn {
+    max-width: 500px;
+    padding: 20px;
+    text-transform: uppercase;
+    align-self: center;
+}
+
+.faqs {
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.faqs h1 {
+    color: rgb(251, 175, 65);
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px 0;
+}
+
+.faqs h3 {
+    font-size: 16px;
+    opacity: 0.6;
+}
+
+.faqs .faqGrid h3 {
+    background: rgb(25, 28, 53);
+    padding: 20px;
+    color: white;
+    opacity: 1;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.faqs .faqGrid .faqItem p {
+    padding: 0px 0;
+    height: 0;
+    font-size: 13px;
+}
+
+.faqs .faqGrid .faqItem {
+    overflow: hidden;
+    width: fit-content;
+}
+
+.faqGrid .left,
+.faqGrid .right {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.faqs .faqGrid .faqItem:hover>p {
+    height: fit-content;
+    padding: 10px 0;
+}
+
+.faqGrid {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    grid-gap: 20px;
+    padding: 2rem 0;
+}
+
+.final {
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.final h1 {
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px 0;
+}
+
+.final .txt-img {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.final .txt-img p {
+    width: 60%;
+}
+
+.final .txt-img .img {
+    width: 40%;
+}
+
+.final .txt-img .img img {
+    width: 100%;
+}
+
+.final .btn {
+    max-width: 500px;
+    padding: 20px;
+    text-transform: uppercase;
+    align-self: center;
+}
+
+.footer {
+    background: url("./temp-data/footerbg.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    color: white;
+}
+
+.footer p:nth-child(1) {
+    text-align: center;
+}
+
+.drawer {
+    display: none;
+    cursor: pointer;
+}
+
+.drop {
+    display: none;
+}
+
+@media (max-width:1000px) {
+    header .routes {
+        display: none;
+    }
+    header .hero h1 {
+        font-size: 30px;
+        margin: 10px 0;
+    }
+    header .hero h3 {
+        font-size: 22px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    header .hero p {
+        font-size: 13px;
+        padding: 10px 0;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    header .hero .img-form {
+        flex-direction: column;
+        row-gap: 20px;
+        padding-top: 20px;
+        align-items: center;
+    }
+    header .hero .img-form .form,
+    header .hero .img-form .img {
+        width: 100%;
+    }
+    .discover,
+    .why {
+        text-align: center;
+    }
+    .discover .txt-img,
+    .why .txt-img {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    .discover .txt-img .img,
+    .why .txt-img .img,
+    .discover .txt-img p,
+    .why .txt-img p {
+        width: 100%;
+    }
+    .discover .txt-img p {
+        font-size: 13px;
+    }
+    .discover .txt-img .img img,
+    .why .txt-img .img img {
+        width: 70%;
+    }
+    .discover h1 {
+        font-size: 30px;
+    }
+    .discover .discover-grid {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .start .startGrid {
+        grid-template-columns: auto;
+        grid-gap: 20px;
+    }
+    .offer {
+        flex-direction: column-reverse;
+    }
+    .offer .txt {
+        width: 100%;
+    }
+    .offer .img {
+        width: 100%;
+    }
+    .offer h1 {
+        font-size: 30px;
+        margin: 1rem 0;
+    }
+    .why .opportunity {
+        flex-direction: column;
+    }
+    .why .opportunity h1 {
+        width: 100%;
+        font-size: 30px;
+    }
+    .why .opportunity .img img {
+        width: 100%;
+    }
+    .why .opportunity .img {
+        width: 100%;
+    }
+    .faqGrid {
+        flex-direction: column;
+    }
+    .final .txt-img {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .final .txt-img p {
+        width: 100%;
+    }
+    .final .txt-img .img {
+        width: 100%;
+    }
+    .drawer {
+        display: block;
+        font-size: 25px;
+    }
+    .drop {
+        display: block;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        line-height: 40px;
+    }
+    .drop a {
+        color: white;
+        text-decoration: none;
+    }
+}
