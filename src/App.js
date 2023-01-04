@@ -39,13 +39,13 @@ function App() {
 
           <ul className="routes">
             <li>
-              <a href="#0">About</a>
+              <a href="#form">About</a>
             </li>
             <li>
-              <a href="#0">Contact</a>
+              <a href="#form">Contact</a>
             </li>
             <li>
-              <a href="#0">Login</a>
+              <a href="#form">Login</a>
             </li>
           </ul>
         </nav>
@@ -53,13 +53,13 @@ function App() {
           <div className="drop">
             <ul>
               <li>
-                <a href="#0">About</a>
+                <a href="#form">About</a>
               </li>
               <li>
-                <a href="#0">Contact</a>
+                <a href="#form">Contact</a>
               </li>
               <li>
-                <a href="#0">Login</a>
+                <a href="#form">Login</a>
               </li>
             </ul>
           </div>
@@ -114,7 +114,7 @@ function App() {
             manager.
           </p>
           <div className="img">
-            <img src="https://bitcoinMine.app/assets/bg-1.webp" alt="" />
+            <img src="https://bitcoinsystem.app/assets/bg-1.webp" alt="" />
           </div>
         </div>
         <div className="discover-grid">
@@ -179,12 +179,12 @@ function App() {
             use trading platforms such as Bitcoin Mine.
           </p>
           <div className="img">
-            <img src="https://bitcoinMine.app/assets/list-1.webp" alt="" />
+            <img src="https://bitcoinsystem.app/assets/list-1.webp" alt="" />
           </div>
         </div>
         <div className="offer">
           <div className="img">
-            <img src="https://bitcoinMine.app/assets/list-2.webp" alt="" />
+            <img src="https://bitcoinsystem.app/assets/list-2.webp" alt="" />
           </div>
           <div className="txt">
             <h1>What can Bitcoin Mine offer you?</h1>
@@ -226,7 +226,7 @@ function App() {
             opportunity.
           </h1>
           <div className="img">
-            <img src="https://bitcoinMine.app/assets/list-3.webp" alt="" />
+            <img src="https://bitcoinsystem.app/assets/list-3.webp" alt="" />
           </div>
         </div>
         <div
