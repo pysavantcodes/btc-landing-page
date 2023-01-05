@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { question, gridData, right } from "./temp-data/discoverGrid";
 import { startGrid } from "./temp-data/startGrid";
 import Img from "./temp-data/img.webp";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [drop, setDrop] = useState(false);
@@ -9,10 +11,12 @@ function App() {
   const [lastName, setLastName] = useState("");
   const [mail, setMail] = useState("");
   const [number, setNumber] = useState("");
+  const [sending, setSending] = useState(false);
   const postData = async () => {
     if (firstName === "" || lastName === "" || mail === "" || number === "") {
       alert("Please Insert all fields!");
     } else {
+      setSending(true);
       const form = new FormData();
       form.append("firstname", firstName);
       form.append("lastname", lastName);
@@ -22,10 +26,6 @@ function App() {
 
       let headersList = {
         Accept: "*/*",
-        "User-Agent": "Thunder Client (https://www.thunderclient.com)",
-        "Access-Control-Allow-Origin": "https://bitmine.vercel.app/",
-        "Access-Control-Allow-Methods": "POST",
-        "Access-Control-Allow-Headers": "Content-Type, Authorization",
       };
 
       let response = await fetch(
@@ -33,13 +33,19 @@ function App() {
         {
           method: "POST",
           body: form,
-
+          mode: "no-cors",
           headers: headersList,
         }
       );
 
       let data = await response.text();
       console.log(data);
+      toast.success("Subscribed", { theme: "dark" });
+      setFirstName("");
+      setLastName("");
+      setMail("");
+      setNumber("");
+      setSending(false);
     }
   };
   return (
@@ -143,7 +149,11 @@ function App() {
                 placeholder="+245-3556-34566"
               />
               <br />
-              <button onClick={() => postData()} className="btn">
+              <button
+                disabled={sending}
+                onClick={() => postData()}
+                className="btn"
+              >
                 Learn More
               </button>
               <p style={{ color: "black", fontSize: "11px", padding: "8px 0" }}>
