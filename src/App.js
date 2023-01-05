@@ -61,7 +61,7 @@ function App() {
               columnGap: "20px",
             }}
           >
-            <select className="lang">
+            {/*<select className="lang">
               <option
                 value="EN"
                 style={{
@@ -92,8 +92,8 @@ function App() {
               >
                 🇩🇪 DE
               </option>
-              {/* <span style={{ fontSize: "10px" }}>&#x25BC;</span> */}
-            </select>
+             
+            </select>*/}
             <h3>
               CryptoAuto<span style={{ color: "rgb(251,175,65)" }}>Trader</span>
             </h3>
