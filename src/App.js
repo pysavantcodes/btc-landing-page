@@ -12,6 +12,7 @@ function App() {
   const [mail, setMail] = useState("");
   const [number, setNumber] = useState("");
   const [sending, setSending] = useState(false);
+
   const postData = async () => {
     if (firstName === "" || lastName === "" || mail === "" || number === "") {
       alert("Please Insert all fields!");
@@ -60,8 +61,9 @@ function App() {
               columnGap: "20px",
             }}
           >
-            <ul className="lang">
-              <li
+            <select className="lang">
+              <option
+                value="EN"
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -69,11 +71,31 @@ function App() {
                 }}
               >
                 🌍 EN
-              </li>
+              </option>
+              <option
+                value="FR"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  columnGap: "5px",
+                }}
+              >
+                🇫🇷 FR
+              </option>
+              <option
+                value="DE"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  columnGap: "5px",
+                }}
+              >
+                🇩🇪 DE
+              </option>
               {/* <span style={{ fontSize: "10px" }}>&#x25BC;</span> */}
-            </ul>
+            </select>
             <h3>
-              Bitcoin<span style={{ color: "rgb(251,175,65)" }}>Mine</span>
+              CryptoAuto<span style={{ color: "rgb(251,175,65)" }}>Trader</span>
             </h3>
           </div>
           <div onClick={() => setDrop(!drop)} className="drawer">
@@ -108,10 +130,10 @@ function App() {
           </div>
         )}
         <section className="hero">
-          <h1>Bitcoin Mine</h1>
-          <h3>Welcome to the Official Bitcoin Mine Platform</h3>
+          <h1>Crypto Auto Trader</h1>
+          <h3>Welcome to the Official Crypto Auto Trader Platform</h3>
           <p>
-            Bitcoin Mine can help you trade on Bitcoin by making it as
+            Crypto Auto Trader can help you trade on Bitcoin by making it as
             accessible and streamlined as possible. It’s suitable for beginners
             and expert traders alike, and it’s available to you right now!
           </p>
@@ -168,19 +190,19 @@ function App() {
         </section>
       </header>
       <section className="discover">
-        <h1>Discover Bitcoin Mine</h1>
+        <h1>Discover Crypto Auto Trader</h1>
         <div className="txt-img">
           <p>
             Have you wanted to invest in Bitcoin and were not sure how? Most
             people think they’ve got to have extensive knowledge of the market
             fluctuations, analyze them for hours at a time, and spend the full
             day dealing with numbers. While some traders like this just don’t
-            have the time. Bitcoin Mine streamlines the process, which doesn’t
-            mean you needn’t do anything. On the contrary, the more you read,
-            analyze, and learn, the better you might understand the market. But
-            with Bitcoin Mine, you can start trading slowly at your own pace,
-            and learn as you go, all the while getting advice from your account
-            manager.
+            have the time. Crypto Auto Trader streamlines the process, which
+            doesn’t mean you needn’t do anything. On the contrary, the more you
+            read, analyze, and learn, the better you might understand the
+            market. But with Crypto Auto Trader, you can start trading slowly at
+            your own pace, and learn as you go, all the while getting advice
+            from your account manager.
           </p>
           <div className="img">
             <img src="https://bitcoinsystem.app/assets/bg-1.webp" alt="" />
@@ -210,10 +232,10 @@ function App() {
       </section>
       <div className="outer">
         <section className="start">
-          <h1>How Do You Start Using Bitcoin Mine?</h1>
+          <h1>How Do You Start Using Crypto Auto Trader?</h1>
           <h3>
-            The process of joining Bitcoin Mine is fairly quick. In fact, anyone
-            can do it with no help at all.
+            The process of joining Crypto Auto Trader is fairly quick. In fact,
+            anyone can do it with no help at all.
           </h3>
           <div className="startGrid">
             {startGrid.map((item) => {
@@ -234,18 +256,18 @@ function App() {
             }}
           >
             <a href="#form">
-              <button className="btn">Discover Bitcoin Mine</button>
+              <button className="btn">Discover Crypto Auto Trader</button>
             </a>
           </div>
         </section>
       </div>
       <section className="why">
-        <h1>Why Bitcoin Mine?</h1>
+        <h1>Why Crypto Auto Trader?</h1>
         <div className="txt-img">
           <p>
             Due to the volatility of the Bitcoin market, traders devise a
             variety of strategies. To facilitate matters, many Bitcoin traders
-            use trading platforms such as Bitcoin Mine.
+            use trading platforms such as Crypto Auto Trader.
           </p>
           <div className="img">
             <img src="https://bitcoinsystem.app/assets/list-1.webp" alt="" />
@@ -256,13 +278,13 @@ function App() {
             <img src="https://bitcoinsystem.app/assets/list-2.webp" alt="" />
           </div>
           <div className="txt">
-            <h1>What can Bitcoin Mine offer you?</h1>
+            <h1>What can Crypto Auto Trader offer you?</h1>
             <p>
               <b>1. Suitable for all traders</b> <br /> You don't need any prior
-              trading experience to get started with Bitcoin Mine. Regardless of
-              whether you're new to trading or an experienced trader, the
-              platform can streamline your trading. <br /> <br />
-              <b>2. User friendly Bitcoin Mine</b> <br />
+              trading experience to get started with Crypto Auto Trader.
+              Regardless of whether you're new to trading or an experienced
+              trader, the platform can streamline your trading. <br /> <br />
+              <b>2. User friendly Crypto Auto Trader</b> <br />
               provides an easy-to-use user interface (UI) and market analytics.
               With the help of your broker, you can also customize your trading
               strategy and easily set profit and loss limits. <br />
@@ -282,16 +304,16 @@ function App() {
               &#x2022; If you’re still unsure about your trading skills, start
               with the ‘Demo’ feature to gain more confidence <br />
               <br /> <b>5. Compatible with all devices</b>
-              <br /> Bitcoin Mine is web-based and therefore compatible with all
-              devices, including your desktop, laptop, tablet, or smartphone.
-              That means you have complete control over your account and may
-              access it at any time and from any location.
+              <br /> Crypto Auto Trader is web-based and therefore compatible
+              with all devices, including your desktop, laptop, tablet, or
+              smartphone. That means you have complete control over your account
+              and may access it at any time and from any location.
             </p>
           </div>
         </div>
         <div className="opportunity">
           <h1>
-            Bitcoin Mine allows you to trade 24/7, so you never miss an
+            Crypto Auto Trader allows you to trade 24/7, so you never miss an
             opportunity.
           </h1>
           <div className="img">
@@ -315,13 +337,13 @@ function App() {
           <h1>FAQs</h1>
           <h3>
             Still here? That’s great, it shows that you might be really
-            interested in the opportunity Bitcoin Mine presents. Even so, you
-            haven’t signed up, so you probably have more questions. It’s normal
-            to wonder about online trading, cryptocurrency, and the proprietary
-            platform of Bitcoin Mine. Take a glance at what others have asked
-            and learn what you need to feel comfortable using the platform.
-            You’re more than welcome to ask more questions, maybe they’ll be
-            added to the list.
+            interested in the opportunity Crypto Auto Trader presents. Even so,
+            you haven’t signed up, so you probably have more questions. It’s
+            normal to wonder about online trading, cryptocurrency, and the
+            proprietary platform of Crypto Auto Trader. Take a glance at what
+            others have asked and learn what you need to feel comfortable using
+            the platform. You’re more than welcome to ask more questions, maybe
+            they’ll be added to the list.
           </h3>
           <div className="faqGrid">
             <div className="left">
@@ -354,13 +376,13 @@ function App() {
             All this is quite a lot to take in, but transparency is important,
             and you should have all the information to feel that you’re ready to
             join and start trading Bitcoin. However, take all the time you
-            require to feel confident that Bitcoin Mine is the right trading
-            platform for you. Bitcoin isn’t going away; the first crypto is
-            still very popular, and so is the opportunity to trade. Bitcoin Mine
-            makes it possible to trade online even if you don’t have much
-            experience. And if you do have years of trading under your belt,
-            Bitcoin Mine still has a lot in store to streamline your trading
-            process.
+            require to feel confident that Crypto Auto Trader is the right
+            trading platform for you. Bitcoin isn’t going away; the first crypto
+            is still very popular, and so is the opportunity to trade. Crypto
+            Auto Trader makes it possible to trade online even if you don’t have
+            much experience. And if you do have years of trading under your
+            belt, Crypto Auto Trader still has a lot in store to streamline your
+            trading process.
           </p>
           <div className="img">
             <img src={Img} alt="" />
@@ -380,15 +402,15 @@ function App() {
       </div>
       <div className="footer">
         <footer>
-          <p style={{ padding: "10px 0" }}>BITCOIN MINE</p>
+          <p style={{ padding: "10px 0" }}>Crypto Auto Trader</p>
           <p>
             <b>Important Risk Note:</b> <br /> Trading can generate notable
             benefits; however, it also involves a risk of partial/full funds
             loss and should be considered by initial investors. Around 70
             percent of the investors will lose money. <br />
-            <br /> #BITCOIN Mine and any other commercial names used on the site
-            are for commercial purposes only, and do not refer to any specific
-            company nor specific services providers. <br />
+            <br /> #Crypto Auto Trader and any other commercial names used on
+            the site are for commercial purposes only, and do not refer to any
+            specific company nor specific services providers. <br />
             <br /> The video is for commercial presentation and illustration
             purposes only, and all participants are actors. <br />
             <br /> Carefully read the terms & conditions and disclaimer page of

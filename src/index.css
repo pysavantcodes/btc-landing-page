@@ -447,6 +447,22 @@ footer {
     display: none;
 }
 
+button:disabled {
+    opacity: .4;
+}
+
+select {
+    outline: none;
+    border: none;
+    background: rgb(50, 43, 124);
+    color: white;
+    cursor: pointer;
+}
+
+select option {
+    border: none;
+}
+
 @media (max-width:1000px) {
     header .routes {
         display: none;
@@ -562,5 +578,8 @@ footer {
     .drop a {
         color: white;
         text-decoration: none;
+    }
+    nav div h3 {
+        font-size: 20px;
     }
 }

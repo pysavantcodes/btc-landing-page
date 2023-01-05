@@ -1,6 +1,6 @@
 export const startGrid = [{
         img: "https://bitcoinsystem.app/assets/step-1.webp",
-        head: "Step 1: Create Your Account with Bitcoin System",
+        head: "Step 1: Create Your Account with Crypto Auto Trader",
         data: "If you are interested in joining the platform, you can scroll up right now to the top of this page to see the account registration form. Input some basic information, and you can join. The process is fast and easy, but you will need to wait for a confirmation email, to ensure the address is accurate. Click on the link to be connected with your partnered broker, and once you log in there with your credentials, you’ll be forwarded to the platform."
     },
     {
