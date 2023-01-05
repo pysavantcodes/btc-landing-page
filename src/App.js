@@ -23,7 +23,7 @@ function App() {
       let headersList = {
         Accept: "*/*",
         "User-Agent": "Thunder Client (https://www.thunderclient.com)",
-        "Access-Control-Allow-Origin": "http://localhost:3000/",
+        "Access-Control-Allow-Origin": "https://bitmine.vercel.app/",
         "Access-Control-Allow-Methods": "POST",
         "Access-Control-Allow-Headers": "Content-Type, Authorization",
       };
