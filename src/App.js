@@ -5,6 +5,43 @@ import Img from "./temp-data/img.webp";
 
 function App() {
   const [drop, setDrop] = useState(false);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [mail, setMail] = useState("");
+  const [number, setNumber] = useState("");
+  const postData = async () => {
+    if (firstName === "" || lastName === "" || mail === "" || number === "") {
+      alert("Please Insert all fields!");
+    } else {
+      const form = new FormData();
+      form.append("firstname", firstName);
+      form.append("lastname", lastName);
+      form.append("mail", mail);
+      form.append("number", number);
+      form.append("command", "insertdata");
+
+      let headersList = {
+        Accept: "*/*",
+        "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+        "Access-Control-Allow-Origin": "http://localhost:3000/",
+        "Access-Control-Allow-Methods": "POST",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization",
+      };
+
+      let response = await fetch(
+        "https://web9072.web07.bero-webspace.de/savedat/storage.php",
+        {
+          method: "POST",
+          body: form,
+
+          headers: headersList,
+        }
+      );
+
+      let data = await response.text();
+      console.log(data);
+    }
+  };
   return (
     <div className="body">
       <header>
@@ -78,15 +115,37 @@ function App() {
             </div>
             <div id="form" className="form">
               <h3>LEARN MORE ABOUT BITCOIN</h3>
-              <input type="text" placeholder="First Name" />
+              <input
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+                type="text"
+                placeholder="First Name"
+              />
               <br />
-              <input type="text" placeholder="Last Name" />
+              <input
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+                type="text"
+                placeholder="Last Name"
+              />
               <br />
-              <input type="email" placeholder="Email" />
+              <input
+                value={mail}
+                onChange={(e) => setMail(e.target.value)}
+                type="email"
+                placeholder="Email"
+              />
               <br />
-              <input type="tel" placeholder="+245-3556-34566" />
+              <input
+                value={number}
+                onChange={(e) => setNumber(e.target.value)}
+                type="tel"
+                placeholder="+245-3556-34566"
+              />
               <br />
-              <button className="btn">Learn More</button>
+              <button onClick={() => postData()} className="btn">
+                Learn More
+              </button>
               <p style={{ color: "black", fontSize: "11px", padding: "8px 0" }}>
                 *By entering your personal details here and clicking the LEARN
                 MORE button you agree and accept the Website Privacy Policy and
