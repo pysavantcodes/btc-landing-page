@@ -12,6 +12,17 @@ function App() {
   const [mail, setMail] = useState("");
   const [number, setNumber] = useState("");
   const [sending, setSending] = useState(false);
+  window.onload = () => {
+    function googleTranslateElementInit() {
+      const google = window.google;
+      new google.translate.TranslateElement(
+        { pageLanguage: "en" },
+        "google_translate_element"
+      );
+    }
+
+    googleTranslateElementInit();
+  };
 
   const postData = async () => {
     if (firstName === "" || lastName === "" || mail === "" || number === "") {
@@ -61,43 +72,12 @@ function App() {
               columnGap: "20px",
             }}
           >
-            {/*<select className="lang">
-              <option
-                value="EN"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  columnGap: "5px",
-                }}
-              >
-                🌍 EN
-              </option>
-              <option
-                value="FR"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  columnGap: "5px",
-                }}
-              >
-                🇫🇷 FR
-              </option>
-              <option
-                value="DE"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  columnGap: "5px",
-                }}
-              >
-                🇩🇪 DE
-              </option>
-             
-            </select>*/}
+           
             <h3>
               CryptoAuto<span style={{ color: "rgb(251,175,65)" }}>Trader</span>
             </h3>
           </div>
+          <div id="google_translate_element"></div>
           <div onClick={() => setDrop(!drop)} className="drawer">
             <p>☰</p>
           </div>
